@@ -1,8 +1,9 @@
-// src/VideoContainer.js
+// src/components/VideoContainer.js
 import React, { useRef, useState } from 'react';
+import { FaPlay, FaPause } from 'react-icons/fa';
 import '../styles/VideoContainer.css';
 
-const VideoContainer = ({ index }) => {
+const VideoContainer = ({ title, filename, thumbnail }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -18,6 +19,7 @@ const VideoContainer = ({ index }) => {
 
   return (
     <div className="video-wrapper">
+      <h2 className="video-title">{title}</h2>
       <div className="video-container">
         <video
           ref={videoRef}
@@ -26,13 +28,14 @@ const VideoContainer = ({ index }) => {
           muted
           loop
           controls={false}
+          poster={`/thumbnails/${thumbnail}`}
         >
-          <source src={`path_to_your_video${index}.mp4`} type="video/mp4" />
+          <source src={`/videos/${filename}`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
       <button className="play-pause-btn" onClick={handlePlayPause}>
-        {isPlaying ? 'Pause' : 'Play'}
+        {isPlaying ? <FaPause /> : <FaPlay />}
       </button>
     </div>
   );

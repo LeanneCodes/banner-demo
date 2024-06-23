@@ -1,27 +1,78 @@
-/* src/LandingPage.css */
+/* src/styles/LandingPage.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414; /* Netflix dark background */
+  color: white; /* Netflix text color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .landing-page {
-    padding: 20px;
-  }
-  
-  .title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-  }
-  
-  .grid-item {
-    width: 300px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
+  padding: 20px;
+  background-color: #141414; /* Netflix dark background */
+  color: white; /* Netflix text color */
+  flex: 1;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.5em;
+  margin-bottom: 20px;
+  color: #e50914; /* Netflix red color */
+}
+
+.description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col-12, .col-sm-6, .col-md-4 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-container {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; /* Dark gray background */
+  border: 1px solid #555; /* Slightly lighter gray border */
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5); /* Dark shadow */
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+.play-pause-btn {
+  margin-top: 10px;
+  background-color: #e50914; /* Netflix red */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.play-pause-btn:hover {
+  background-color: #f40612; /* Lighter red on hover */
+}

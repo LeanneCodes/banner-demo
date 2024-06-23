@@ -1,0 +1,18 @@
+/* src/styles/Footer.css */
+.footer {
+    background-color: #141414; /* Netflix dark background */
+    color: #e50914; /* Netflix red color */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+  

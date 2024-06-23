@@ -1,5 +1,7 @@
+// src/LandingPage.js
 import React from 'react';
-import '../styles/LandingPage.css'
+import '../styles/LandingPage.css';
+import VideoContainer from './VideoContainer';
 
 const LandingPage = () => {
   return (
@@ -13,7 +15,7 @@ const LandingPage = () => {
         <div className="row justify-content-center">
           {Array.from({ length: 6 }, (_, index) => (
             <div key={index} className="col-12 col-sm-6 col-md-4 d-flex justify-content-center mt-5">
-              <div className="grid-item">Container {index + 1}</div>
+              <VideoContainer index={index + 1} />
             </div>
           ))}
         </div>
